@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 
-class YoutubeScreen extends StatefulWidget {
-  const YoutubeScreen({super.key});
+class YoutubeScreen extends StatelessWidget {
+  const YoutubeScreen({super.key, required this.title, required this.url});
 
-  @override
-  State<YoutubeScreen> createState() => _YoutubeScreenState();
-}
+  final String title;
+  final String url;
 
-class _YoutubeScreenState extends State<YoutubeScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return WebViewWrapper(title: title, url: url);
   }
 }
